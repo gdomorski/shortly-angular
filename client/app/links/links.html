@@ -1,7 +1,10 @@
 <div id="container">
   <!-- Your html here -->
+  <li ng-repeat="link in data.links"> <img src = "{{link.url}}/favicon.ico"></img> <a href = "{{link.base_url}}/{{link.code}}">{{link.title}}</a> <text>{{link.visits}}</text> </li>
   <ul>
-  <li ng-repeat="link in data.links"> {{link}} </li>
   </ul>
 
 </div>
+
+<!-- 
+{"_id":"56882089ea92bb0f259b07c6","code":"738dd","url":"http://www.google.com","visits":0,"base_url":"http://localhost:8000","title":"Google","__v":0} -->

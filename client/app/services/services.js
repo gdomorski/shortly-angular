@@ -18,10 +18,17 @@ angular.module('shortly.services', [])
     return $http({
       method: 'POST',
       url: '/api/links',
-      data: url
+      data: {url: url},
+      transformResponse: function(data){
+        return {data: url};
+      }
+      
     })
     .then(function (resp) {
       return resp;
+    })
+    .catch(function (err){
+      throw err;
     });
   };
   return {
