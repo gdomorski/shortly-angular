@@ -1,8 +1,10 @@
 <div id="container">
   <!-- Your html here -->
+
+  <input ng-model="searchText"/>
   
   <ul class="link-list">
-    <li class="link-item" ng-repeat="link in data.links"> <img src = "{{link.url}}/favicon.ico"></img> <a href = "{{link.base_url}}/{{link.code}}">{{link.title}}</a> <text>{{link.visits}}</text> </li>
+    <li class="link-item" ng-repeat="link in data.links | filter:searchText"> <img src = "{{link.url}}/favicon.ico"></img> <a href = "{{link.base_url}}/{{link.code}}">{{link.title}}</a> <text>{{link.visits}}</text> </li>
   </ul>
 
 </div>
