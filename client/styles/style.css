@@ -146,3 +146,25 @@ input[type=url]:focus {
   clear: both;
 }
 
+.link-list {
+  list-style: none;
+}
+
+.link-item {
+  height: 30px;
+  padding-top: 30px;
+/*  position: relative;
+*/}
+
+.link-item img {
+  height: 25px;
+}
+
+.link-item a, text {
+  padding-bottom: 5px;
+  top: -20%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+
